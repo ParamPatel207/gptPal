@@ -5,6 +5,7 @@ from urlextract import URLExtract
 # Load your API key from an environment variable or secret management service
 openai.api_key = os.environ["OPEN_AI"]
 
+#generateTLDR generates a summary of the article
 def generateTLDR(prompt):
   response = openai.Completion.create(
   engine="davinci",
@@ -16,18 +17,21 @@ def generateTLDR(prompt):
   presence_penalty=0.0)
   return response.choices[0].text
 
+#urlToText converts a URL to a string of text
 def urlToText(url = "https://www.google.com"):
   article = Article(url)
   article.download()
   article.parse()
   return article.text
 
-def getURLS(message): # Returns all URLs in a string as a list
+#getURLS takes a message and returns a list of URLs in a string
+def getURLS(message): 
   extractor = URLExtract()
   urls = extractor.find_urls(message)
   return urls
 
-def FinalOutput(message):
+#Final
+def MLHandler(message):
   urls = getURLS(message)
   temp = ""
   if not urls:
