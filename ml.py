@@ -30,7 +30,7 @@ def getURLS(message):
   urls = extractor.find_urls(message)
   return urls
 
-#Final
+#MLHandler takes a message and returns a summary of the article
 def MLHandler(message):
   urls = getURLS(message)
   temp = ""

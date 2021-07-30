@@ -1,6 +1,6 @@
 import os
 import slack
-from ml import FinalOutput
+from ml import MLHandler
 from pathlib import Path
 from dotenv import load_dotenv
 from flask import Flask
@@ -28,7 +28,7 @@ def handle_message(event_data):
     text = event.get('text')
 
     if BOT_ID != user_id:
-        val = FinalOutput(text)
+        val = MLHandler(text)
         client.chat_postMessage(channel=channel_id, text=val)
 
 if __name__ == '__main__':
