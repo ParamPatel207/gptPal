@@ -2,7 +2,10 @@ import os
 import openai
 from newspaper import Article
 from urlextract import URLExtract
+from pathlib import Path
+from dotenv import load_dotenv
 # Load your API key from an environment variable or secret management service
+load_dotenv()
 openai.api_key = os.environ["OPEN_AI"]
 
 #generateTLDR generates a summary of the article

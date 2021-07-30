@@ -7,8 +7,7 @@ from flask import Flask
 from slackeventsapi import SlackEventAdapter
 
 # handling environment variables
-env_path = Path('.') / '.env'
-load_dotenv(dotenv_path=env_path)
+load_dotenv()
 
 #starting flask and slack events handler
 app = Flask(__name__)
