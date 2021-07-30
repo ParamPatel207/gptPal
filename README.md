@@ -16,5 +16,6 @@ We are working on a bot that will allow you to interact with the Gpt3 API and us
 - use ```sh python3 gptPal.py``` in the terminal to run the bot
 - run ```sh chmod +x ngrok``` to make the file executable
 - run ```sh ngrok http 5000``` to start the ngrok server
-- copy the ngrok url from the terminal as shown in the attached image![Screenshot](/images/ngrok.png) and paste it in the slack bot configuration as shown in the attached image![Screenshot](/images/slack_event.png)
+- copy the ngrok url from the terminal as shown in the attached image![Screenshot](/images/ngrok.png)
+- paste it in the slack bot configuration as shown in the attached image![Screenshot](/images/slack_event.png)
 - your bot should be up and running!
